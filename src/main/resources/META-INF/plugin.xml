@@ -1,10 +1,10 @@
 <idea-plugin>
     <id>uk.co.geckode.stackdev</id>
-    <name>Plugin display name here</name>
+    <name>Stack Development</name>
     <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
+    Plugin which allows you to cut out the middle man! Replace highlighted text with the first result from stack overflow.<br>
     <em>most HTML tags may be used</em>
     ]]></description>
 
@@ -19,6 +19,10 @@
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
+        <action id="RunStackDev" class="main.StackDev" text="Run Stack Development"
+                description="Replace highlighted text with the best match from stackoverflow! - cut out the middle man">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl S" second-keystroke="ctrl D"/>
+        </action>
     </actions>
 </idea-plugin>
