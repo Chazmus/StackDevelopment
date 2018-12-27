@@ -19,7 +19,7 @@
     </extensions>
 
     <actions>
-        <action id="RunStackDev" class="main.StackDev" text="Run Stack Development"
+        <action id="RunStackDev" class="application.StackDev" text="Run Stack Development"
                 description="Replace highlighted text with the best match from stackoverflow! - cut out the middle man">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl S" second-keystroke="ctrl D"/>

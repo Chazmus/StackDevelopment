@@ -1,3 +1,10 @@
+#######################################
+# User defined
+
+intellij-community
+
+#######################################
+
 # Created by https://www.gitignore.io/api/git,vim,java,gradle
 # Edit at https://www.gitignore.io/?templates=git,vim,java,gradle
 
@@ -82,3 +89,5 @@ gradle-app.setting
 **/build/
 
 # End of https://www.gitignore.io/api/git,vim,java,gradle
+
+

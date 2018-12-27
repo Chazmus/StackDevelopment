@@ -1,4 +1,4 @@
-package main;
+package application;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -12,6 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class StackDev extends AnAction {
 
+
     @Override
     public void actionPerformed(AnActionEvent event) {
         // Get the required data from data keys
@@ -19,6 +20,10 @@ public class StackDev extends AnAction {
         final Project project = editor.getProject();
         final Document document = editor.getDocument();
         final SelectionModel selectionModel = editor.getSelectionModel();
+        StackApi stackApi = new StackApi(project);
+
+        String selectedText = selectionModel.getSelectedText();
+        stackApi.getAnswers(selectedText);
         final int start = selectionModel.getSelectionStart();
         final int end = selectionModel.getSelectionEnd();
         // Make the replacement
